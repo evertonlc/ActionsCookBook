@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Greet the user
         run: |
-          echo "Hello world from ${{ github.actor }}"
-          echo "Hello world from ${{ github.ref }}"
+          echo "Hello ${{ vars.WHO_TO_GREET }} from ${{ github.actor }}"
+          echo "My secrect is ${{ secrets.MY_SECRET }}"
       - name: Checkout
         uses: actions/checkout@v6
       - run: tree
