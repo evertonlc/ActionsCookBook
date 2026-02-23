@@ -8,7 +8,6 @@ jobs:
       pull-requests: write
     steps:
     - run: |
-        echo "Workflow triggered in branch: ${{ github.head_ref }}"
         echo "Workflow triggered by event: ${{ github.event_name }}"
         echo "Workflow triggered by actor: ${{ github.actor }}"
     - uses: actions/checkout@v6
